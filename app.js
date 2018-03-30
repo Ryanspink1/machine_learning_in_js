@@ -2,11 +2,6 @@ const brain = require("brain.js")
 
 const network = new brain.NeuralNetwork()
 
-// network.train([
-//   {input:{height: 60, weight: 150}, output:{adult: 1}},
-//   {input:{height: 70, weight: 160}, output:{adult: 1}},
-//   {input:{height: 30, weight: 60}, output:{adult: 0}}
-// ])
 network.train([
   { input: {r: 0.62, g: 0.72, b: 0.88}, output: { light: 1}},
   { input: {r: 0.1, g: 0.84, b: 0.72}, output: { light: 1}},
