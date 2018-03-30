@@ -5,7 +5,7 @@
   </style>
 </head>
 <body>
-  <input type="color" value = "#ff0000"/>
+  <input style="width:100%; height:80%;" type="color" value = "#ff0000"/>
   <div id="example">Example Text</div>
 
   <script src="https://unpkg.com/brain.js@1.1.2/browser.min.js"></script>
@@ -30,9 +30,23 @@
     const input = document.querySelector("input")
     const example = document.querySelector("#example")
 
+    const network = new brain.NeuralNetwork()
+
+    network.train([
+      { input: {r: 0.62, g: 0.72, b: 0.88}, output: { light: 1}},
+      { input: {r: 0.1, g: 0.84, b: 0.72}, output: { light: 1}},
+      { input: {r: 0.33, g: 0.24, b: 0.29}, output: { dark: 1}},
+      { input: {r: 0.74, g: 0.78, b: 0.86}, output: { light: 1}},
+      { input: {r: 0.31, g: 0.35, b: 0.41}, output: { dark: 1}}
+    ])
+
+
+
+
     input.addEventListener("change", (e) => {
       const rgb = getRgb(e.target.value);
-      console.log(rgb);
+      const result = network.run(rgb)
+      console.log(result);
       example.style.background = e.target.value
     })
   </script>
