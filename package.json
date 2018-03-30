@@ -1,0 +1,23 @@
+{
+  "name": "js_machine_learning",
+  "version": "1.0.0",
+  "description": "Machine Learning Tutorial in JS",
+  "main": "app.js",
+  "dependencies": {
+    "brain.js": "^1.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryanspink1/machine_learning_in_js.git"
+  },
+  "author": "R.S. Tech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ryanspink1/machine_learning_in_js/issues"
+  },
+  "homepage": "https://github.com/Ryanspink1/machine_learning_in_js#readme"
+}
