@@ -45,9 +45,11 @@
 
     input.addEventListener("change", (e) => {
       const rgb = getRgb(e.target.value);
-      const result = network.run(rgb)
+      const result = brain.likely(rgb, network)
+      // const result = network.run(rgb)
       console.log(result);
       example.style.background = e.target.value
+      example.style.color = result == "dark" ? "white" : "black"
     })
   </script>
 </body>
